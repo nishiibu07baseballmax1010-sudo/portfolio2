@@ -101,7 +101,9 @@ section h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  justify-items: center;
+  justify-items: center; /* 中央揃え */
+  max-width: 1200px;    /* ギャラリー全体の最大幅 */
+  margin: auto;
 }
 
 .gallery img {
@@ -122,12 +124,14 @@ section h2 {
 .card {
   position: relative;
   cursor: pointer;
+    width: 100%;
   max-width: 300px;
 }
 
 .card img {
   width: 100%;
   height: auto;
+    display: block;
   border-radius: 8px;
 }
 
