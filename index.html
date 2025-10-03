@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>企業風ポートフォリオ</title>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <!-- Micromodal CSS -->
   <link rel="stylesheet" href="https://unpkg.com/micromodal/dist/micromodal.min.css">
-  <!-- カスタムCSS -->
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,30 +16,32 @@
   <div class="logo">My Portfolio</div>
   <nav>
     <a href="#works">Works</a>
-    <a href="#services">Services</a>
+    <a href="photoshop.html">Photoshop制作</a>
+    <a href="youtube.html">YouTubeサムネ</a>
+    <a href="landing.html">ランディングページ</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- ヒーロースライダー -->
+<!-- スライダー -->
 <div class="swiper hero-swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide" style="background-image:url('images/sample1.JPG')">
       <div class="overlay">
         <h1>Photoshop Works</h1>
-        <a href="#works" class="btn">View Works</a>
+        <a href="photoshop.html" class="btn">View Works</a>
       </div>
     </div>
     <div class="swiper-slide" style="background-image:url('images/sample2.JPG')">
       <div class="overlay">
         <h1>YouTube Thumbnails</h1>
-        <a href="#works" class="btn">View Works</a>
+        <a href="youtube.html" class="btn">View Works</a>
       </div>
     </div>
     <div class="swiper-slide" style="background-image:url('images/sample3.JPG')">
       <div class="overlay">
         <h1>Landing Pages</h1>
-        <a href="#works" class="btn">View Works</a>
+        <a href="landing.html" class="btn">View Works</a>
       </div>
     </div>
   </div>
@@ -84,9 +85,7 @@
   </div>
 </section>
 
-<!-- モーダル用 HTML -->
-
-<!-- 作品1 -->
+<!-- モーダル -->
 <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1">
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
@@ -100,8 +99,6 @@
     </div>
   </div>
 </div>
-
-<!-- 作品2 -->
 <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1">
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
@@ -115,8 +112,6 @@
     </div>
   </div>
 </div>
-
-<!-- 作品3 -->
 <div class="modal micromodal-slide" id="modal-3" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1">
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
@@ -130,8 +125,6 @@
     </div>
   </div>
 </div>
-
-<!-- 作品4 -->
 <div class="modal micromodal-slide" id="modal-4" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1">
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
@@ -153,14 +146,17 @@
     <div class="service">
       <h3>Photoshop制作</h3>
       <p>高品質な画像制作、加工、編集</p>
+      <a href="photoshop.html" class="btn">詳しく見る</a>
     </div>
     <div class="service">
       <h3>YouTubeサムネ</h3>
       <p>再生されやすいサムネイルデザイン</p>
+      <a href="youtube.html" class="btn">詳しく見る</a>
     </div>
     <div class="service">
       <h3>ランディングページ</h3>
       <p>企業向けの集客・販促ページ制作</p>
+      <a href="landing.html" class="btn">詳しく見る</a>
     </div>
   </div>
 </section>
@@ -180,12 +176,9 @@
   &copy; 2025 My Portfolio. All Rights Reserved.
 </footer>
 
-<!-- JSライブラリ -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<!-- カスタムJS -->
 <script src="js/main.js"></script>
-
 </body>
 </html>

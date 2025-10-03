@@ -63,6 +63,14 @@ section {
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
 }
+.gallery img {
+  width: 100%;
+  height: auto; /* 縦横比を保持 */
+  max-width: 300px; /* 最大サイズを指定 */
+  border-radius: 8px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
 .card {
   position:relative;
   cursor:pointer;
