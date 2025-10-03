@@ -3,160 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>デザインポートフォリオ</title>
+  <title>企業風ポートフォリオ</title>
   <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background: #fff;
-      color: #111;
-    }
-    header {
-      position: absolute;
-      top: 20px;
-      left: 40px;
-      z-index: 10;
-      font-size: 1.5em;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    nav {
-      position: absolute;
-      top: 20px;
-      right: 40px;
-      z-index: 10;
-    }
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ddd;
-    }
-    /* スライダー */
-    .swiper {
-      width: 100%;
-      height: 100vh;
-    }
-    .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-    }
-    .overlay {
-      background: rgba(0,0,0,0.3);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .overlay h2 {
-      font-size: 3em;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    section h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 40px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-    /* 作品集 */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-    /* サービス */
-    .services ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-    .services li {
-      font-size: 1.2em;
-      margin: 15px 0;
-    }
-    /* 問い合わせ */
-    .contact-form {
-      max-width: 600px;
-      margin: auto;
-    }
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    .contact-form button {
-      background-color: #111;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-    .contact-form button:hover {
-      background-color: #333;
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
-      background-color: #111;
-      color: #fff;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <!-- Micromodal CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/micromodal/dist/micromodal.min.css">
+  <!-- カスタムCSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  My Portfolio
+  <div class="logo">My Portfolio</div>
+  <nav>
+    <a href="#works">Works</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
-<nav>
-  <a href="#works">Works</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
 
-<!-- スライダー -->
-<div class="swiper">
+<!-- ヒーロースライダー -->
+<div class="swiper hero-swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image:url('/portfolio2/sample1.JPG')">
-      <div class="overlay"><h2>Photoshop Works</h2></div>
+    <div class="swiper-slide" style="background-image:url('/portfolio2/images/sample1.JPG')">
+      <div class="overlay">
+        <h1>Photoshop Works</h1>
+        <a href="#works" class="btn">View Works</a>
+      </div>
     </div>
-    <div class="swiper-slide" style="background-image:url('/portfolio2/sample2.JPG')">
-      <div class="overlay"><h2>YouTube Thumbnails</h2></div>
+    <div class="swiper-slide" style="background-image:url('/portfolio2/images/sample2.JPG')">
+      <div class="overlay">
+        <h1>YouTube Thumbnails</h1>
+        <a href="#works" class="btn">View Works</a>
+      </div>
     </div>
-    <div class="swiper-slide" style="background-image:url('/portfolio2/sample: 3JPG;')">
-      <div class="overlay"><h2>Landing Pages</h2></div>
+    <div class="swiper-slide" style="background-image:url('/portfolio2/images/sample3.JPG')">
+      <div class="overlay">
+        <h1>Landing Pages</h1>
+        <a href="#works" class="btn">View Works</a>
+      </div>
     </div>
   </div>
   <div class="swiper-pagination"></div>
@@ -168,28 +53,76 @@
 <section id="works">
   <h2>Works</h2>
   <div class="gallery">
-    <img src="/portfolio2/sample1.JPG" alt="作品1">
-    <img src="/portfolio2/sample2.JPG" alt="作品2">
-    <img src="/portfolio2/sample3.JPG" alt="作品3">
-    <img src="/portfolio2/sample4.JPG" alt="作品4">
+    <div class="card" data-micromodal-trigger="modal-1">
+      <img src="/portfolio2/images/sample1.JPG" alt="作品1">
+      <div class="card-info">
+        <h3>作品1</h3>
+        <p>Photoshop</p>
+      </div>
+    </div>
+    <div class="card" data-micromodal-trigger="modal-2">
+      <img src="/portfolio2/images/sample2.JPG" alt="作品2">
+      <div class="card-info">
+        <h3>作品2</h3>
+        <p>YouTube Thumbnails</p>
+      </div>
+    </div>
+    <div class="card" data-micromodal-trigger="modal-3">
+      <img src="/portfolio2/images/sample3.JPG" alt="作品3">
+      <div class="card-info">
+        <h3>作品3</h3>
+        <p>Landing Pages</p>
+      </div>
+    </div>
+    <div class="card" data-micromodal-trigger="modal-4">
+      <img src="/portfolio2/images/sample4.JPG" alt="作品4">
+      <div class="card-info">
+        <h3>作品4</h3>
+        <p>Banners</p>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- モーダル用 HTML -->
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <h2 id="modal-1-title">作品1</h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+      </header>
+      <main class="modal__content">
+        <img src="/portfolio2/images/sample1.JPG" alt="作品1">
+      </main>
+    </div>
+  </div>
+</div>
+<!-- 同様に modal-2, modal-3, modal-4 を作成 -->
+
 <!-- サービス -->
-<section id="services" class="services">
+<section id="services">
   <h2>Services</h2>
-  <ul>
-    <li>Photoshop画像作成</li>
-    <li>YouTubeサムネイル制作</li>
-    <li>ランディングページデザイン</li>
-    <li>バナー・SNS広告デザイン</li>
-  </ul>
+  <div class="services-grid">
+    <div class="service">
+      <h3>Photoshop制作</h3>
+      <p>高品質な画像制作、加工、編集</p>
+    </div>
+    <div class="service">
+      <h3>YouTubeサムネ</h3>
+      <p>再生されやすいサムネイルデザイン</p>
+    </div>
+    <div class="service">
+      <h3>ランディングページ</h3>
+      <p>企業向けの集客・販促ページ制作</p>
+    </div>
+  </div>
 </section>
 
 <!-- お問い合わせ -->
 <section id="contact">
   <h2>Contact</h2>
-  <form class="contact-form" action="mailto:yourmail@example.com" method="post" enctype="text/plain">
+  <form class="contact-form" action="https://formspree.io/f/xxxxxxx" method="POST">
     <input type="text" name="name" placeholder="お名前" required>
     <input type="email" name="email" placeholder="メールアドレス" required>
     <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
@@ -201,27 +134,12 @@
   &copy; 2025 My Portfolio. All Rights Reserved.
 </footer>
 
-<!-- Swiper JS -->
+<!-- JSライブラリ -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.swiper', {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    effect: 'fade',
-    speed: 1000,
-  });
-</script>
+<script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- カスタムJS -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
