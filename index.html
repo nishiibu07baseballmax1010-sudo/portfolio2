@@ -110,7 +110,7 @@
 <!-- お問い合わせ -->
 <section id="contact">
   <h2>Contact</h2>
-  <form class="contact-form" action="https://formspree.io/f/xxxxxxx" method="POST">
+  <form class="contact-form">
     <input type="text" name="name" placeholder="お名前" required>
     <input type="email" name="email" placeholder="メールアドレス" required>
     <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
@@ -126,5 +126,24 @@
 <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="js/main.js"></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("1zpclHT66iMveOrmj"); // EmailJSのユーザーID
+  })();
+
+  const form = document.querySelector('.contact-form');
+  form.addEventListener('submit', function(e){
+    e.preventDefault(); // ページリロード防止
+
+    emailjs.sendForm('service_lc4dunt', 'template_oav478a', this)
+      .then(function(){
+        alert('送信完了しました！');
+        form.reset(); // フォームリセット
+      }, function(err){
+        alert('送信失敗: ' + JSON.stringify(err));
+      });
+  });
+</script>
 </body>
 </html>

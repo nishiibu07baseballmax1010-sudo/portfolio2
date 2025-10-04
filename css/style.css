@@ -24,8 +24,10 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
+  box-sizing: border-box; /* ←追加 */
   z-index: 100;
   background: rgba(0,0,0,0.5);
+  overflow: hidden;       /* はみ出さないようにする */
 }
 
 header .logo {
@@ -233,29 +235,71 @@ section h2 {
 /* ============================= */
 /* お問い合わせフォーム */
 /* ============================= */
-.contact-form input, .contact-form textarea {
+
+#contact {
+  padding: 100px 40px 80px 40px;
+  box-sizing: border-box;
+  background: #f5f7fa; /* 薄いグレーにして白のフォームが浮く */
+  color: #333;
+}
+
+/* Contactタイトル */
+#contact h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5em;
+  color: #111;
+}
+
+/* フォーム中央配置 */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 入力欄・テキストエリア */
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 5px;
-  border: none;
+  padding: 15px 20px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;   /* 薄い枠線で入力欄を目立たせる */
+  background: #fff;         /* 入力欄は白 */
+  font-size: 1em;
+  transition: border 0.3s, box-shadow 0.3s;
   box-sizing: border-box;
 }
 
-.contact-form button {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  background: #fff;
-  color: #111;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
+/* フォーカス時に色を変える */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
 }
 
-.contact-form button:hover {
-  background: #ddd;
+/* 送信ボタン */
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #007BFF;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s, transform 0.2s;
 }
+
+/* ホバー時 */
+.contact-form button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
 
 /* ============================= */
 /* フッター */
