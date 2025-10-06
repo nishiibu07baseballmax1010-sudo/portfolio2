@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | My Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.png" alt="ロゴ" class="logo-img">
+      <span class="logo-text">My Portfolio</span>
+    </a>
+    <nav>
+      <a href="photoshop.html">Photoshop制作</a>
+      <a href="youtube.html">YouTubeサムネ</a>
+      <a href="landing.html">ランディングページ</a>
+      <a href="banners.html">バナー制作</a>
+    </nav>
+  </header>
+
+  <!-- メイン -->
+  <main style="padding-top: 100px;">
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="お名前" required>
+        <input type="email" name="email" placeholder="メールアドレス" required>
+        <textarea name="message" rows="5" placeholder="お問い合わせ内容" required></textarea>
+        <button type="submit">送信</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 My Portfolio. All Rights Reserved.
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("1zpclHT66iMveOrmj"); // あなたのEmailJSユーザーID
+    })();
+
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      emailjs.sendForm('service_lc4dunt', 'template_oav478a', this)
+        .then(function(){
+          alert('送信完了しました！');
+          form.reset();
+        }, function(err){
+          alert('送信失敗: ' + JSON.stringify(err));
+        });
+    });
+  </script>
+
+</body>
+</html>
