@@ -47,6 +47,25 @@ header nav a:hover {
   color: #ddd;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
 /* ============================= */
 /* ヒーロースライダー */
 /* ============================= */
@@ -72,9 +91,24 @@ header nav a:hover {
 }
 
 .overlay h1 {
-  font-size: 4em;
+  font-size: 6em;
   font-weight: 700;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  opacity: 1;            /* 最初は表示 */
+  transform: scale(1);   /* 最初は通常サイズ */
+  transition: opacity 9s ease, transform 9s ease;
+}
+
+.overlay h1.active {
+  opacity: 0;
+  transform: scale(0.8); /* 徐々に小さく、薄くなる */
+}
+
+.overlay h1.fade-out {
+  opacity: 0;
+  transform: scale(0.8); /* 小さくして消える */
 }
 
 .overlay .btn {
@@ -116,6 +150,7 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 自動で列を調整 */
   gap: 20px;
   justify-items: center; /* 中央揃え */
+  align-items: stretch; /* ← これが重要！ */
   max-width: 1000px;
   margin: 40px auto; /* 上下の余白 */
 }
@@ -158,6 +193,8 @@ section h2 {
 
 /* ============================= */
 /* カード用 */
+/* ============================= */
+
 .card {
   position: relative;
   cursor: pointer;
@@ -171,6 +208,8 @@ section h2 {
   display: flex;           /* 子要素をflexで配置 */
   justify-content: center; /* 横中央寄せ */
   align-items: center;     /* 縦中央寄せ */
+  flex-direction: column;
+  height: 100%;
 }
 
 .card img {
