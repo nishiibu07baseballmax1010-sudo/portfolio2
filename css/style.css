@@ -98,7 +98,7 @@ header nav a:hover {
   width: 30px;
   height: 30px;
   position: absolute;  /* 位置をfixedにして画面上部に表示 */
-  left: 78%;      /* 右端に配置 */
+  left: 80%;      /* 右端に配置 */
   top: 50%;        /* 上から20px */
   z-index: 1100;    /* メニューよりも上に表示されるように */
 }
