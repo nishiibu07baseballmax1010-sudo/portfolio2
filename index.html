@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <!-- Micromodal CSS -->
@@ -14,10 +15,15 @@
 
 <header>
   <a href="index.html" class="logo-link">
-    <img src="https://via.placeholder.com/40" alt="ロゴ" class="logo-img">
-    <span class="logo-text">My Portfolio</span>
+    <img src="images/ロゴ/ESロゴ.jpg" alt="ロゴ" class="logo-img">
+    <span class="logo-text"></span>
   </a>
-  <nav>
+
+  <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+   <span class="hamburger"></span>
+  </button>
+
+   <nav class="nav-menu">
     <a href="#works">Works</a>
     <a href="photoshop.html">Photoshop制作</a>
     <a href="youtube.html">YouTubeサムネ</a>
@@ -30,25 +36,25 @@
 <!-- スライダー -->
 <div class="swiper hero-swiper">
   <div class="swiper-wrapper">
-    <div class="swiper-slide" style="background-image:url('images/sample1.JPG')">
+    <div class="swiper-slide" style="background-image:url('images/LP/美容/美容（LP）正方形切り抜き.jpg')">
       <div class="overlay">
         <h1>Photoshop Works</h1>
         <a href="photoshop.html" class="btn">View Works</a>
       </div>
     </div>
-    <div class="swiper-slide" style="background-image:url('images/sample2.JPG')">
+    <div class="swiper-slide" style="background-image:url('images/SNS広告/セミナー広告.jpg')">
       <div class="overlay">
         <h1>YouTube Thumbnails</h1>
         <a href="youtube.html" class="btn">View Works</a>
       </div>
     </div>
-    <div class="swiper-slide" style="background-image:url('images/sample3.JPG')">
+    <div class="swiper-slide" style="background-image:url('images/サムネイル/転職系チャンネルを想定（サムネイル）.jpg')">
       <div class="overlay">
         <h1>Landing Pages</h1>
         <a href="landing.html" class="btn">View Works</a>
       </div>
     </div>
-     <div class="swiper-slide" style="background-image:url('images/sample2.JPG')">
+     <div class="swiper-slide" style="background-image:url('images/バナー/ドリンクバナー.jpg')">
       <div class="overlay">
         <h1>banners</h1>
         <a href="banners.html" class="btn">View Works</a>
